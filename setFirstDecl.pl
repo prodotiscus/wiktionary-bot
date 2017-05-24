@@ -17,9 +17,9 @@ foreach $article (@first_decl){
     my $text = $bot->get_text($article);
     $text =~ s/\{\{сущ la(\s|)\|/{{сущ la 1 i|$new_name|/g;
     $bot->edit({
-	page    => $article,
-	text    => $text,
-	summary => 'автоматическая простановка первого склонения для латинских слов'
+    page    => $article,
+    text    => $text,
+    summary => 'автоматическая простановка первого склонения для латинских слов'
     });
     print "Edit of page $article\n";
 }
